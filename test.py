@@ -55,7 +55,7 @@ def updateWaterfall(i):
   wfdata = np.frombuffer(readData, dtype=np.uint8, offset=wf1Offset, count=wf1Length)
   datachunk = np.frombuffer(readData, dtype=np.uint8, offset=dataChunkOffset, count=dataChunkLength)
   np.set_printoptions(formatter={'int':lambda x: format(x, '02X')}, linewidth=99)
-  print(datachunk)
+  #   print(datachunk)
 
   f = interp1d(oscX, oscdata, kind='cubic')
   
@@ -71,7 +71,6 @@ def updateWaterfall(i):
   wfim.set_data(wfarr)
   ax.relim()
   ax.autoscale_view()
-  plt.pause(0.1)
 
 ani = animation.FuncAnimation(fig, updateWaterfall, interval=50, frames=10000)
 plt.show()
