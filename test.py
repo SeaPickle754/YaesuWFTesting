@@ -29,7 +29,7 @@ nbDev = ft4222.createDeviceInfoList()
 for i in range(nbDev):
   print(ft4222.getDeviceInfoDetail(i, False))
 
-dev = ft4222.openByDescription('FT4222 A')
+dev = ft4222.openByDescription(b'FT4222 A')
 
 dev.spiMaster_Init(Mode.SINGLE, Clock.DIV_16, Cpol.IDLE_HIGH, Cpha.CLK_TRAILING, SlaveSelect.SS0)
 dev.setClock(SysClock.CLK_48)
