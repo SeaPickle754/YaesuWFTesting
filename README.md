@@ -21,3 +21,6 @@ Repeat again for receiver 2.
 
 The next 144 bytes is radio parameters, and this is my current main focus. This has frequencies, bandwidths, meter data, filters, etc.
 
+So far determined:
+I think the byte 22 from the end is the S meter reading. It is constantly changing and goes to high values when the RF Gain/Sql knob is all the way down.
+
